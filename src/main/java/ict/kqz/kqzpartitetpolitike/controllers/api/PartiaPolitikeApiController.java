@@ -19,6 +19,11 @@ public class PartiaPolitikeApiController extends AbstractApiController<PartiaPol
         super(service);
     }
 
+    @GetMapping("/search")
+    public List<PartiaPolitike> getPartiaPolitikeByEmri(@RequestParam String emri) {
+        return ((PartiaPolitikeService)service).getPartiaPolitikeByEmri(emri);
+    }
+
 //    //GET   http://localhost:9090/api/partitepolitike
 //    @GetMapping(value = "")
 //    public List<PartiaPolitike> getAll() {

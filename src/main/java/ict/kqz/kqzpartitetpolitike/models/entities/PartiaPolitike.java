@@ -4,11 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 //partia_politike
@@ -25,6 +23,10 @@ public class PartiaPolitike {
     private boolean aktiv;
     private String kryetariPartise;
     private String logoUrl;
+
+//    @OneToMany(fetch = FetchType.LAZY )
+//    @JoinColumn(name = "antari_id", referencedColumnName = "id")
+//    private List<Antari> antaret;
 
     public PartiaPolitike() {
     }

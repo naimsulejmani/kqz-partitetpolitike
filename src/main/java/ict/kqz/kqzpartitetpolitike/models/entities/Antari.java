@@ -25,4 +25,9 @@ public class Antari {
     private String surname;
     private LocalDate datelindja;
     private char gender;
+
+//    @ManyToOne
+//    @JoinColumn(name = "antari_id")
+//
+//    public PartiaPolitike partia;
 }

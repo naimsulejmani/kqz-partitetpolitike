@@ -16,6 +16,10 @@ public class PartiaPolitikeService extends AbstractService<PartiaPolitike, Strin
         //this.repository = repository;
     }
 
+    public List<PartiaPolitike> getPartiaPolitikeByEmri(String emri) {
+        return  ((PartiaPolitikeRepository)repository).getPartiaPolitikeByEmri(emri);
+    }
+
 
     //CRUD -> CREATE, READ, UPDATE dhe DELETE
 

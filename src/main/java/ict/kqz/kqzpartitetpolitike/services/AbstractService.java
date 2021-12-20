@@ -8,7 +8,7 @@ import java.util.List;
 //CRUD
 public abstract class AbstractService<T, Tid> {
 
-    private final JpaRepository<T, Tid> repository;
+    protected final JpaRepository<T, Tid> repository;
 
     protected AbstractService(JpaRepository<T, Tid> repository) {
         this.repository = repository;
