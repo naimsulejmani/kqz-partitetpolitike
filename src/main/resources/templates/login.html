@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Panel</title>
+</head>
+<body>
+<form th:action="${loginAction}" method="POST" th:object="${loginModel}">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Username" th:field="${loginModel.username}"/>
+    <br><br>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" th:field="${loginModel.password}"/>
+    <br><br>
+    <div>
+        <span th:text="${error}">
+
+        </span>
+    </div>
+    <br><br>
+    <button type="submit">Login</button>
+
+</form>
+</body>
+</html>
